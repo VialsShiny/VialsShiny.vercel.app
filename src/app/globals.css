@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -208,6 +206,8 @@
   }
 }
 
+@import "tailwindcss";
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -279,4 +279,156 @@ html {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Classes utilitaires pour les couleurs */
+
+/* Backgrounds */
+.bg-gradient-theme {
+  background: linear-gradient(to bottom right, var(--bg-gradient-from), var(--bg-gradient-via), var(--bg-gradient-to));
+}
+
+.bg-theme {
+  background-color: var(--background);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent:hover,
+.hover\:bg-accent-hover:hover {
+  background-color: var(--accent-hover);
+}
+
+.bg-card {
+  background-color: var(--card-bg);
+}
+
+.hover\:bg-card-hover:hover {
+  background-color: var(--card-hover);
+}
+
+.bg-badge {
+  background-color: var(--badge-bg);
+}
+
+.bg-project {
+  background-color: var(--project-bg);
+}
+
+.bg-project:hover,
+.hover\:bg-project-hover:hover {
+  background-color: var(--project-hover);
+}
+
+.bg-button-social {
+  background-color: var(--button-social-bg);
+}
+
+.bg-button-social:hover,
+.hover\:bg-button-social-hover:hover {
+  background-color: var(--button-social-hover);
+}
+
+.bg-skill-bar {
+  background-color: var(--skill-bar-bg);
+}
+
+.bg-particle-1 {
+  background-color: var(--particle-1);
+}
+
+.bg-particle-2 {
+  background-color: var(--particle-2);
+}
+
+/* Gradients */
+.bg-gradient-button {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.bg-gradient-skill {
+  background: linear-gradient(to right, var(--skill-bar-fill-from), var(--skill-bar-fill-to));
+}
+
+/* Text colors */
+.text-theme {
+  color: var(--foreground);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-light {
+  color: var(--primary-light);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-text-primary {
+  color: var(--text-primary);
+}
+
+.text-text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.text-badge {
+  color: var(--badge-text);
+}
+
+.text-project-tag {
+  color: var(--project-tag-text);
+}
+
+/* Border colors */
+.border-card {
+  border-color: var(--card-border);
+}
+
+.border-card-border {
+  border-color: var(--card-border);
+}
+
+/* Background avec border combinés pour les cards */
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+}
+
+.card:hover {
+  background-color: var(--card-hover);
+}
+
+/* Badge complet */
+.badge {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+/* Tag de projet */
+.project-tag {
+  background-color: var(--project-tag-bg);
+  color: var(--project-tag-text);
+}
+
+/* Bouton hover card */
+.hover\:bg-card-hover:hover {
+  background-color: var(--card-hover);
 }
