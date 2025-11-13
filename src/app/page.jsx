@@ -42,8 +42,8 @@ export default function Home() {
       </button>
 
       {/* Contenu principal */}
-      <div className="container mx-auto px-6 py-12 md:h-screen flex items-center">
-        <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 py-12 xl:h-screen flex items-center">
+        <div className="w-full grid grid-cols-1 2xl:grid-cols-2 gap-12 items-center">
 
           {/* Section gauche - Présentation */}
           <div className="space-y-6 animate-fadeIn">
