@@ -15,8 +15,23 @@ export const portfolioData = {
     { nom: "CSS/Tailwind", niveau: 95 }
   ],
   projets: [
-    { titre: "Piscine Atlantis", description: "Site vitrine mettant en valeur l’expertise de l’entreprise dans les piscines, spas et équipements bien-être, avec un design moderne et une navigation intuitive." },
-    { titre: "Resto App", description: "Application web de vente de plats (pizza, burger, etc.) permettant de gérer commandes et menus de manière efficace, avec une interface utilisateur conviviale." },
-    { titre: "Mini Social", description: "Mini réseau social interactif offrant un flux de contenus en temps réel pour découvrir de nouveaux posts et interagir facilement avec la communauté." }
+    {
+      titre: "Piscine Atlantis",
+      description: "Site vitrine mettant en valeur l’expertise de l’entreprise dans les piscines, spas et équipements bien-être, avec un design moderne et une navigation intuitive.",
+      link: "https://piscineatlantis.fr",
+      tags: ["php", "javascript", "html", "css", 'twig'],
+    },
+    {
+      titre: "Resto App",
+      description: "Application web de vente de plats (pizza, burger, etc.) permettant de gérer commandes et menus de manière efficace, avec une interface utilisateur conviviale.",
+      link: "https://github.com/VialsShiny/resto_app_react",
+      tags: ['react', 'laravel', 'javascript']
+    },
+    {
+      titre: "Mini Social",
+      description: "Mini réseau social interactif offrant un flux de contenus en temps réel pour découvrir de nouveaux posts et interagir facilement avec la communauté.",
+      link: "https://mini-social-phi.vercel.app",
+      tags: ['react', 'express', 'javascript'] 
+    }
   ]
 };
