@@ -1,19 +1,23 @@
-import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL("https://vials-shiny.vercel.app"),
   title: "Thibault Vialatou | Développeur Fullstack",
-  description: "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
-  keywords: "Portfolio, Développeur Web, React, Next.js, Animations, Frontend, Backend, Php, Thibault Vialatou",
+  description:
+    "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+  keywords:
+    "Portfolio, Développeur Web, React, Next.js, Animations, Frontend, Backend, Php, Thibault Vialatou",
   authors: [{ name: "Thibault Vialatou" }],
   openGraph: {
     title: "Thibault Vialatou | Développeur Fullstack",
-    description: "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
-    url: "https://vials-shiny.vercel.app",
+    description:
+      "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+    url: "/",
     siteName: "Portfolio",
     images: [
       {
-        url: "https://vials-shiny.vercel.app/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Aperçu du portfolio de Thibault Vialatou",
@@ -25,19 +29,19 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Thibault Vialatou | Développeur Fullstack",
-    description: "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
-    images: ["https://vials-shiny.vercel.app/og-image.png"],
+    description:
+      "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+    images: ["/og-image.png"],
     creator: "@VialsShiny",
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         {children}
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );
