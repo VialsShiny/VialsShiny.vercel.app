@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
-import { Moon, Sun, Mail, Github, Linkedin, MapPin, ChevronDown, SquareArrowOutUpRight } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail, Moon, SquareArrowOutUpRight, Sun } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { portfolioData } from './data/info';
 
 export default function Home() {
@@ -61,7 +61,7 @@ export default function Home() {
                 {portfolioData.prenom}
               </span>
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              <span className="bg-clip-text">
                 {portfolioData.nom}
               </span>
             </h1>
@@ -167,7 +167,7 @@ export default function Home() {
               </button>
 
               <div className={`transition-all duration-500 ease-in-out ${accordionOpen.projets
-                  ? 'md:max-h-[30vh] opacity-100 overflow-y-scroll'
+                  ? 'lg:max-h-[30vh] opacity-100 lg:overflow-y-scroll'
                   : 'max-h-0 opacity-0'
                 } overflow-hidden`}>
                 <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 space-y-3 sm:space-y-4">
