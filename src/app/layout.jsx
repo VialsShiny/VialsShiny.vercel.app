@@ -1,4 +1,4 @@
-import Script from "next/script";
+import { GoogleTagManager } from '@next/third-parties/google';
 import "./globals.css";
 
 export const metadata = {
@@ -37,20 +37,7 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body>
         {children}
-
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-VDNE4VSP8W"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VDNE4VSP8W');
-          `}
-        </Script>
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );
