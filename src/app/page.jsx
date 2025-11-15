@@ -4,6 +4,7 @@ import { ChevronDown, Github, Linkedin, Mail, Moon, SquareArrowOutUpRight, Sun }
 import { BsStars } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import { portfolioData } from './data/info';
+import Accordion from './components/Accordion';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -37,7 +38,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gradient-theme min-h-screen text-theme transition-colors duration-500">
+    <div className="bg-gradient-theme xl:max-h-screen min-h-screen overflow-hidden text-theme transition-colors duration-500">
       {/* Bouton de basculement du thème */}
       <button
         onClick={toggleTheme}
@@ -49,7 +50,7 @@ export default function Home() {
 
       {/* Contenu principal */}
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 min-h-screen flex items-center">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center my-auto">
+        <div className="w-full grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center my-auto">
 
           {/* Section gauche - Présentation */}
           <div className="space-y-4 sm:space-y-6 animate-fadeIn">
@@ -113,119 +114,81 @@ export default function Home() {
 
           {/* Section droite - Compétences et Projets */}
           <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-
-            {/* Compétences - Accordéon */}
-            <div className="rounded-2xl sm:rounded-3xl backdrop-blur-sm transition-all duration-300 overflow-hidden bg-card border border-card shadow-xl">
-              <button
-                onClick={() => toggleAccordion('competences')}
-                className="w-full p-4 sm:p-6 lg:p-8 flex items-center justify-between transition-colors hover:bg-card-hover"
-              >
-                <h2 className="text-xl sm:text-2xl font-bold text-primary">
-                  Compétences
-                </h2>
-                <ChevronDown
-                  className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ${accordionOpen.competences ? 'rotate-180' : ''
-                    }`}
-                />
-              </button>
-
-              <div className={`transition-all duration-500 ease-in-out ${accordionOpen.competences
-                ? 'max-h-96 opacity-100'
-                : 'max-h-0 opacity-0'
-                } overflow-hidden`}>
-                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-                    {portfolioData.competences.map((comp, idx) => (
-                      <div
-                        key={idx}
-                        className="bg-project hover:bg-project-hover p-4 rounded-xl transition-all duration-300 hover:scale-105 flex flex-col items-center gap-3 text-center"
-                      >
-                        {/* Icône */}
-                        <div className="w-12 h-12 bg-gradient-skill rounded-lg flex items-center justify-center text-white text-2xl shadow-md">
-                          {comp.icon}
-                        </div>
-
-                        {/* Nom de la compétence */}
-                        <span className="font-semibold text-sm">{comp.nom}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Projets récents - Accordéon */}
-            <div className="rounded-2xl sm:rounded-3xl backdrop-blur-sm transition-all duration-300 overflow-hidden bg-card border border-card shadow-xl">
-              <button
-                onClick={() => toggleAccordion('projets')}
-                className="w-full p-4 sm:p-6 lg:p-8 flex items-center justify-between transition-colors hover:bg-card-hover"
-              >
-                <h2 className="text-xl sm:text-2xl font-bold text-primary">
-                  Projets Récents
-                </h2>
-                <ChevronDown
-                  className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 ${accordionOpen.projets ? 'rotate-180' : ''
-                    }`}
-                />
-              </button>
-
-              <div className={`transition-all duration-500 ease-in-out ${accordionOpen.projets
-                ? 'lg:max-h-[30vh] opacity-100 lg:overflow-y-scroll'
-                : 'max-h-0 opacity-0'
-                } overflow-hidden`}>
-                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 space-y-3 sm:space-y-4">
-                  {portfolioData.projets.map((projet, idx) => (
+            <Accordion toggleAccordion={() => toggleAccordion('competences')} accordionTheme={accordionOpen.competences} title="Compétences">
+              <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                  {portfolioData.competences.map((comp, idx) => (
                     <div
                       key={idx}
-                      className="p-3 sm:p-4 relative rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] bg-project hover:bg-project-hover"
+                      className="bg-project hover:bg-project-hover p-4 rounded-xl transition-all duration-300 hover:scale-105 flex flex-col items-center gap-3 text-center"
                     >
-                      {idx === 0 ? (
-                        <div className='flex space-x-2 items-center mb-1 pr-8'>
-                          <BsStars />
-                          <h3 className="relative font-semibold text-base sm:text-lg">
-                            {projet.titre}
-                          </h3>
-                        </div>
-                      ) : (
-                        <h3 className="relative font-semibold text-base sm:text-lg mb-1 pr-8">
-                          {projet.titre}
-                        </h3>
-                      )}
-
-
-
-                      {/* 🔗 Lien projet */}
-                      <a
-                        href={projet.link}
-                        target='_blank'
-                        rel="noopener noreferrer"
-                        aria-label={`Voir ${projet.titre}`}
-                        className="absolute right-2 sm:right-3 top-2 sm:top-3 hover:scale-110 transition-transform"
-                      >
-                        <SquareArrowOutUpRight className='w-4 h-4 sm:w-5 sm:h-5' />
-                      </a>
-
-                      <p className="text-xs sm:text-sm mb-2 text-text-tertiary">
-                        {projet.description}
-                      </p>
-                      <div className='flex flex-wrap gap-2'>
-                        {projet.tags.map((tag, tagIdx) => (
-                          <span
-                            key={tagIdx}
-                            className="px-2 py-0.5 rounded-md text-xs project-tag"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                      {/* Icône */}
+                      <div className="w-12 h-12 bg-gradient-skill rounded-lg flex items-center justify-center text-white text-2xl shadow-md">
+                        {comp.icon}
                       </div>
+
+                      {/* Nom de la compétence */}
+                      <span className="font-semibold text-sm">{comp.nom}</span>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
+            </Accordion>
+
+            <Accordion toggleAccordion={() => toggleAccordion('projets')} accordionTheme={accordionOpen.projets} title="Projets Récents">
+              <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 space-y-3 sm:space-y-4">
+                {portfolioData.projets.map((projet, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 sm:p-4 relative rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] bg-project hover:bg-project-hover"
+                  >
+                    {idx === 0 ? (
+                      <div className='flex space-x-2 items-center mb-1 pr-8'>
+                        <BsStars />
+                        <h3 className="relative font-semibold text-base sm:text-lg">
+                          {projet.titre}
+                        </h3>
+                      </div>
+                    ) : (
+                      <h3 className="relative font-semibold text-base sm:text-lg mb-1 pr-8">
+                        {projet.titre}
+                      </h3>
+                    )}
+
+
+
+                    {/* 🔗 Lien projet */}
+                    <a
+                      href={projet.link}
+                      target='_blank'
+                      rel="noopener noreferrer"
+                      aria-label={`Voir ${projet.titre}`}
+                      className="absolute right-2 sm:right-3 top-2 sm:top-3 hover:scale-110 transition-transform"
+                    >
+                      <SquareArrowOutUpRight className='w-4 h-4 sm:w-5 sm:h-5' />
+                    </a>
+
+                    <p className="text-xs sm:text-sm mb-2 text-text-tertiary">
+                      {projet.description}
+                    </p>
+                    <div className='flex flex-wrap gap-2'>
+                      {projet.tags.map((tag, tagIdx) => (
+                        <span
+                          key={tagIdx}
+                          className="px-2 py-0.5 rounded-md text-xs project-tag"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Accordion>
           </div>
         </div>
       </div>
+
 
       {/* Particules décoratives */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
