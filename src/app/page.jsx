@@ -5,6 +5,7 @@ import { BsStars } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import { portfolioData } from './data/info';
 import Accordion from './components/Accordion';
+import ContactBtn from './components/ContactBtn';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -89,26 +90,14 @@ export default function Home() {
               </a>
 
               {/* GitHub */}
-              <a
-                href={`https://${portfolioData.github}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-110 bg-button-social hover:bg-button-social-hover shadow-md"
-                aria-label='Mon Github'
-              >
+              <ContactBtn hrefA={`https://${portfolioData.github}`} targetA={true} ariaLabel="Mon Github">
                 <Github className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
+              </ContactBtn>
 
               {/* Linkedin */}
-              <a
-                href={`https://${portfolioData.linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 sm:p-3 rounded-full transition-all duration-300 transform hover:scale-110 bg-button-social hover:bg-button-social-hover shadow-md"
-                aria-label='Mon Linkedin'
-              >
+              <ContactBtn hrefA={`https://${portfolioData.linkedin}`} targetA={true} ariaLabel="Mon Linkedin">
                 <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-              </a>
+              </ContactBtn>
             </div>
           </div>
 
