@@ -1,6 +1,7 @@
 'use client'
 
 import { ChevronDown, Github, Linkedin, Mail, Moon, SquareArrowOutUpRight, Sun } from 'lucide-react';
+import { BsStars } from "react-icons/bs";
 import { useEffect, useState } from 'react';
 import { portfolioData } from './data/info';
 
@@ -129,24 +130,26 @@ export default function Home() {
               </button>
 
               <div className={`transition-all duration-500 ease-in-out ${accordionOpen.competences
-                  ? 'max-h-96 opacity-100'
-                  : 'max-h-0 opacity-0'
+                ? 'max-h-96 opacity-100'
+                : 'max-h-0 opacity-0'
                 } overflow-hidden`}>
-                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 space-y-4">
-                  {portfolioData.competences.map((comp, idx) => (
-                    <div key={idx} className="space-y-2">
-                      <div className="flex justify-between text-xs sm:text-sm font-medium">
-                        <span>{comp.nom}</span>
-                        <span>{comp.niveau}%</span>
+                <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+                    {portfolioData.competences.map((comp, idx) => (
+                      <div
+                        key={idx}
+                        className="bg-project hover:bg-project-hover p-4 rounded-xl transition-all duration-300 hover:scale-105 flex flex-col items-center gap-3 text-center"
+                      >
+                        {/* Icône */}
+                        <div className="w-12 h-12 bg-gradient-skill rounded-lg flex items-center justify-center text-white text-2xl shadow-md">
+                          {comp.icon}
+                        </div>
+
+                        {/* Nom de la compétence */}
+                        <span className="font-semibold text-sm">{comp.nom}</span>
                       </div>
-                      <div className="h-2 rounded-full overflow-hidden bg-skill-bar">
-                        <div
-                          className="h-full rounded-full transition-all duration-1000 ease-out bg-gradient-skill"
-                          style={{ width: accordionOpen.competences ? `${comp.niveau}%` : '0%' }}
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -167,8 +170,8 @@ export default function Home() {
               </button>
 
               <div className={`transition-all duration-500 ease-in-out ${accordionOpen.projets
-                  ? 'lg:max-h-[30vh] opacity-100 lg:overflow-y-scroll'
-                  : 'max-h-0 opacity-0'
+                ? 'lg:max-h-[30vh] opacity-100 lg:overflow-y-scroll'
+                : 'max-h-0 opacity-0'
                 } overflow-hidden`}>
                 <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8 space-y-3 sm:space-y-4">
                   {portfolioData.projets.map((projet, idx) => (
@@ -176,9 +179,20 @@ export default function Home() {
                       key={idx}
                       className="p-3 sm:p-4 relative rounded-xl transition-all duration-300 hover:transform hover:scale-[1.02] bg-project hover:bg-project-hover"
                     >
-                      <h3 className="font-semibold text-base sm:text-lg mb-1 pr-8">
-                        {projet.titre}
-                      </h3>
+                      {idx === 0 ? (
+                        <div className='flex space-x-2 items-center mb-1 pr-8'>
+                          <BsStars />
+                          <h3 className="relative font-semibold text-base sm:text-lg">
+                            {projet.titre}
+                          </h3>
+                        </div>
+                      ) : (
+                        <h3 className="relative font-semibold text-base sm:text-lg mb-1 pr-8">
+                          {projet.titre}
+                        </h3>
+                      )}
+
+
 
                       {/* 🔗 Lien projet */}
                       <a
