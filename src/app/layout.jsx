@@ -34,6 +34,9 @@ export const metadata = {
     images: ["/og-image.png"],
     creator: "@VialsShiny",
   },
+  verification: {
+    google: "UEuRcAxf1ul07aumSUX_6oSxBnWhQTUD4cRBFcyP1yo",
+  },
 };
 
 export default function RootLayout({ children }) {
