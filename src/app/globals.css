@@ -1,451 +1,481 @@
 :root {
-  --background: rgba(255, 255, 255, 1);
-  --foreground: rgba(23, 23, 23, 1);
+    --background: rgba(255, 255, 255, 1);
+    --foreground: rgba(23, 23, 23, 1);
 
-  /* Couleurs du thème clair */
-  --bg-gradient-from: rgba(250, 245, 255, 1);
-  /* purple-50 */
-  --bg-gradient-via: rgba(252, 231, 243, 1);
-  /* pink-50 */
-  --bg-gradient-to: rgba(255, 255, 255, 1);
+    /* Couleurs du thème clair */
+    --bg-gradient-from: rgba(250, 245, 255, 1);
+    /* purple-50 */
+    --bg-gradient-via: rgba(252, 231, 243, 1);
+    /* pink-50 */
+    --bg-gradient-to: rgba(255, 255, 255, 1);
 
-  --primary: rgba(147, 51, 234, 1);
-  /* purple-600 */
-  --primary-light: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --primary-dark: rgba(124, 58, 237, 1);
-  /* purple-600 */
+    --primary: rgba(147, 51, 234, 1);
+    /* purple-600 */
+    --primary-light: rgba(168, 85, 247, 1);
+    /* purple-500 */
+    --primary-dark: rgba(124, 58, 237, 1);
+    /* purple-600 */
 
-  --secondary: rgba(236, 72, 153, 1);
-  /* pink-500 */
-  --secondary-light: rgba(249, 168, 212, 1);
-  /* pink-300 */
-  --secondary-dark: rgba(219, 39, 119, 1);
-  /* pink-600 */
+    --secondary: rgba(236, 72, 153, 1);
+    /* pink-500 */
+    --secondary-light: rgba(249, 168, 212, 1);
+    /* pink-300 */
+    --secondary-dark: rgba(219, 39, 119, 1);
+    /* pink-600 */
 
-  --accent: rgba(244, 114, 182, 1);
-  /* pink-400 */
-  --accent-hover: rgba(236, 72, 153, 1);
-  /* pink-500 */
+    --accent: rgba(244, 114, 182, 1);
+    /* pink-400 */
+    --accent-hover: rgba(236, 72, 153, 1);
+    /* pink-500 */
 
-  --text-primary: rgba(31, 41, 55, 1);
-  /* gray-800 */
-  --text-secondary: rgba(75, 85, 99, 1);
-  /* gray-600 */
-  --text-tertiary: rgba(107, 114, 128, 1);
-  /* gray-500 */
+    --text-primary: rgba(31, 41, 55, 1);
+    /* gray-800 */
+    --text-secondary: rgba(75, 85, 99, 1);
+    /* gray-600 */
+    --text-tertiary: rgba(107, 114, 128, 1);
+    /* gray-500 */
 
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --card-border: rgba(251, 207, 232, 1);
-  /* pink-200 */
-  --card-hover: rgba(0, 0, 0, 0.05);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(251, 207, 232, 1);
+    /* pink-200 */
+    --card-hover: rgba(0, 0, 0, 0.05);
 
-  --badge-bg: rgba(251, 207, 232, 1);
-  /* pink-200 */
-  --badge-text: rgba(190, 24, 93, 1);
-  /* pink-700 */
+    --badge-bg: rgba(251, 207, 232, 1);
+    /* pink-200 */
+    --badge-text: rgba(190, 24, 93, 1);
+    /* pink-700 */
 
-  --skill-bar-bg: rgba(229, 231, 235, 1);
-  /* gray-200 */
-  --skill-bar-fill-from: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --skill-bar-fill-to: rgba(249, 168, 212, 1);
-  /* pink-400 */
+    --skill-bar-bg: rgba(229, 231, 235, 1);
+    /* gray-200 */
+    --skill-bar-fill-from: rgba(168, 85, 247, 1);
+    /* purple-500 */
+    --skill-bar-fill-to: rgba(249, 168, 212, 1);
+    /* pink-400 */
 
-  --project-bg: rgba(250, 245, 255, 1);
-  /* purple-50 */
-  --project-hover: rgba(243, 232, 255, 1);
-  /* purple-100 */
-  --project-tag-bg: rgba(168, 85, 247, 0.2);
-  --project-tag-text: rgba(107, 33, 168, 1);
-  /* purple-700 */
+    --project-bg: rgb(238, 219, 255);
+    /* purple-50 */
+    --project-hover: rgb(220, 192, 250);
+    /* purple-100 */
+    --project-tag-bg: rgba(168, 85, 247, 0.2);
+    --project-tag-text: rgba(107, 33, 168, 1);
+    /* purple-700 */
 
-  --button-social-bg: rgba(255, 255, 255, 1);
-  --button-social-hover: rgba(243, 244, 246, 1);
-  /* gray-100 */
+    --button-social-bg: rgba(255, 255, 255, 1);
+    --button-social-hover: rgba(243, 244, 246, 1);
+    /* gray-100 */
 
-  --particle-1: rgba(249, 168, 212, 1);
-  /* pink-300 */
-  --particle-2: rgba(216, 180, 254, 1);
-  /* purple-300 */
+    --particle-1: rgba(249, 168, 212, 1);
+    /* pink-300 */
+    --particle-2: rgba(216, 180, 254, 1);
+    /* purple-300 */
 
-  /* Scrollbar */
-  --scrollbar-thumb: linear-gradient(180deg, rgba(168, 85, 247, 1), rgba(236, 72, 153, 1));
-  --scrollbar-thumb-hover: linear-gradient(180deg, rgba(147, 51, 234, 1), rgba(219, 39, 119, 1));
+    /* Scrollbar */
+    --scrollbar-thumb: linear-gradient(
+        180deg,
+        rgba(168, 85, 247, 1),
+        rgba(236, 72, 153, 1)
+    );
+    --scrollbar-thumb-hover: linear-gradient(
+        180deg,
+        rgba(147, 51, 234, 1),
+        rgba(219, 39, 119, 1)
+    );
 }
 
-[data-theme="dark"] {
-  --background: rgba(10, 10, 10, 1);
-  --foreground: rgba(237, 237, 237, 1);
-
-  /* Couleurs du thème sombre */
-  --bg-gradient-from: rgba(17, 24, 39, 1);
-  /* gray-900 */
-  --bg-gradient-via: rgba(88, 28, 135, 1);
-  /* purple-900 */
-  --bg-gradient-to: rgba(0, 0, 0, 1);
-
-  --primary: rgba(147, 51, 234, 1);
-  /* purple-600 */
-  --primary-light: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --primary-dark: rgba(124, 58, 237, 1);
-  /* purple-500 */
-
-  --secondary: rgba(236, 72, 153, 1);
-  /* pink-500 */
-  --secondary-light: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --secondary-dark: rgba(147, 51, 234, 1);
-  /* purple-600 */
-
-  --accent: rgba(147, 51, 234, 1);
-  /* purple-600 */
-  --accent-hover: rgba(168, 85, 247, 1);
-  /* purple-500 */
-
-  --text-primary: rgba(255, 255, 255, 1);
-  --text-secondary: rgba(209, 213, 219, 1);
-  /* gray-300 */
-  --text-tertiary: rgba(156, 163, 175, 1);
-  /* gray-400 */
-
-  --card-bg: rgba(88, 28, 135, 0.3);
-  /* purple-900/30 */
-  --card-border: rgba(168, 85, 247, 0.3);
-  /* purple-500/30 */
-  --card-hover: rgba(255, 255, 255, 0.05);
-
-  --badge-bg: rgba(168, 85, 247, 0.3);
-  --badge-text: rgba(216, 180, 254, 1);
-  /* purple-300 */
-
-  --skill-bar-bg: rgba(31, 41, 55, 1);
-  /* gray-800 */
-  --skill-bar-fill-from: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --skill-bar-fill-to: rgba(236, 72, 153, 1);
-  /* pink-500 */
-
-  --project-bg: rgba(31, 41, 55, 0.5);
-  /* gray-800/50 */
-  --project-hover: rgba(31, 41, 55, 1);
-  /* gray-800 */
-  --project-tag-bg: rgba(168, 85, 247, 0.2);
-  --project-tag-text: rgba(216, 180, 254, 1);
-  /* purple-300 */
-
-  --button-social-bg: rgba(31, 41, 55, 1);
-  /* gray-800 */
-  --button-social-hover: rgba(55, 65, 81, 1);
-  /* gray-700 */
-
-  --particle-1: rgba(168, 85, 247, 1);
-  /* purple-500 */
-  --particle-2: rgba(236, 72, 153, 1);
-  /* pink-500 */
-
-  /* Scrollbar */
-  --scrollbar-thumb: linear-gradient(180deg, rgba(124, 58, 237, 1), rgba(168, 85, 247, 1));
-  --scrollbar-thumb-hover: linear-gradient(180deg, rgba(109, 40, 217, 1), rgba(147, 51, 234, 1));
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
+[data-theme='dark'] {
     --background: rgba(10, 10, 10, 1);
     --foreground: rgba(237, 237, 237, 1);
 
+    /* Couleurs du thème sombre */
     --bg-gradient-from: rgba(17, 24, 39, 1);
+    /* gray-900 */
     --bg-gradient-via: rgba(88, 28, 135, 1);
+    /* purple-900 */
     --bg-gradient-to: rgba(0, 0, 0, 1);
 
     --primary: rgba(147, 51, 234, 1);
+    /* purple-600 */
     --primary-light: rgba(168, 85, 247, 1);
+    /* purple-500 */
     --primary-dark: rgba(124, 58, 237, 1);
+    /* purple-500 */
 
     --secondary: rgba(236, 72, 153, 1);
+    /* pink-500 */
     --secondary-light: rgba(168, 85, 247, 1);
+    /* purple-500 */
     --secondary-dark: rgba(147, 51, 234, 1);
+    /* purple-600 */
 
     --accent: rgba(147, 51, 234, 1);
+    /* purple-600 */
     --accent-hover: rgba(168, 85, 247, 1);
+    /* purple-500 */
 
     --text-primary: rgba(255, 255, 255, 1);
     --text-secondary: rgba(209, 213, 219, 1);
+    /* gray-300 */
     --text-tertiary: rgba(156, 163, 175, 1);
+    /* gray-400 */
 
     --card-bg: rgba(88, 28, 135, 0.3);
+    /* purple-900/30 */
     --card-border: rgba(168, 85, 247, 0.3);
+    /* purple-500/30 */
     --card-hover: rgba(255, 255, 255, 0.05);
 
     --badge-bg: rgba(168, 85, 247, 0.3);
     --badge-text: rgba(216, 180, 254, 1);
+    /* purple-300 */
 
     --skill-bar-bg: rgba(31, 41, 55, 1);
+    /* gray-800 */
     --skill-bar-fill-from: rgba(168, 85, 247, 1);
+    /* purple-500 */
     --skill-bar-fill-to: rgba(236, 72, 153, 1);
+    /* pink-500 */
 
     --project-bg: rgba(31, 41, 55, 0.5);
+    /* gray-800/50 */
     --project-hover: rgba(31, 41, 55, 1);
+    /* gray-800 */
     --project-tag-bg: rgba(168, 85, 247, 0.2);
     --project-tag-text: rgba(216, 180, 254, 1);
+    /* purple-300 */
 
     --button-social-bg: rgba(31, 41, 55, 1);
+    /* gray-800 */
     --button-social-hover: rgba(55, 65, 81, 1);
+    /* gray-700 */
 
     --particle-1: rgba(168, 85, 247, 1);
+    /* purple-500 */
     --particle-2: rgba(236, 72, 153, 1);
+    /* pink-500 */
 
-    --scrollbar-thumb: linear-gradient(180deg, rgba(124, 58, 237, 1), rgba(168, 85, 247, 1));
-    --scrollbar-thumb-hover: linear-gradient(180deg, rgba(109, 40, 217, 1), rgba(147, 51, 234, 1));
-  }
+    /* Scrollbar */
+    --scrollbar-thumb: linear-gradient(
+        180deg,
+        rgba(124, 58, 237, 1),
+        rgba(168, 85, 247, 1)
+    );
+    --scrollbar-thumb-hover: linear-gradient(
+        180deg,
+        rgba(109, 40, 217, 1),
+        rgba(147, 51, 234, 1)
+    );
 }
 
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
 
-@import "tailwindcss";
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --background: rgba(10, 10, 10, 1);
+        --foreground: rgba(237, 237, 237, 1);
+
+        --bg-gradient-from: rgba(17, 24, 39, 1);
+        --bg-gradient-via: rgba(88, 28, 135, 1);
+        --bg-gradient-to: rgba(0, 0, 0, 1);
+
+        --primary: rgba(147, 51, 234, 1);
+        --primary-light: rgba(168, 85, 247, 1);
+        --primary-dark: rgba(124, 58, 237, 1);
+
+        --secondary: rgba(236, 72, 153, 1);
+        --secondary-light: rgba(168, 85, 247, 1);
+        --secondary-dark: rgba(147, 51, 234, 1);
+
+        --accent: rgba(147, 51, 234, 1);
+        --accent-hover: rgba(168, 85, 247, 1);
+
+        --text-primary: rgba(255, 255, 255, 1);
+        --text-secondary: rgba(209, 213, 219, 1);
+        --text-tertiary: rgba(156, 163, 175, 1);
+
+        --card-bg: rgba(88, 28, 135, 0.3);
+        --card-border: rgba(168, 85, 247, 0.3);
+        --card-hover: rgba(255, 255, 255, 0.05);
+
+        --badge-bg: rgba(168, 85, 247, 0.3);
+        --badge-text: rgba(216, 180, 254, 1);
+
+        --skill-bar-bg: rgba(31, 41, 55, 1);
+        --skill-bar-fill-from: rgba(168, 85, 247, 1);
+        --skill-bar-fill-to: rgba(236, 72, 153, 1);
+
+        --project-bg: rgba(31, 41, 55, 0.5);
+        --project-hover: rgba(31, 41, 55, 1);
+        --project-tag-bg: rgba(168, 85, 247, 0.2);
+        --project-tag-text: rgba(216, 180, 254, 1);
+
+        --button-social-bg: rgba(31, 41, 55, 1);
+        --button-social-hover: rgba(55, 65, 81, 1);
+
+        --particle-1: rgba(168, 85, 247, 1);
+        --particle-2: rgba(236, 72, 153, 1);
+
+        --scrollbar-thumb: linear-gradient(
+            180deg,
+            rgba(124, 58, 237, 1),
+            rgba(168, 85, 247, 1)
+        );
+        --scrollbar-thumb-hover: linear-gradient(
+            180deg,
+            rgba(109, 40, 217, 1),
+            rgba(147, 51, 234, 1)
+        );
+    }
+}
+
+@import 'tailwindcss';
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes grow {
-  from {
-    width: 0;
-  }
+    from {
+        width: 0;
+    }
 
-  to {
-    width: var(--target-width);
-  }
+    to {
+        width: var(--target-width);
+    }
 }
 
 .bar-animated {
-  animation: grow 1s ease-in-out forwards;
+    animation: grow 1s ease-in-out forwards;
 }
 
 /* Scrollbar personnalisée */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-light) transparent;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) transparent;
 }
 
 *::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 10px;
+    background: transparent;
+    border-radius: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+    background: var(--scrollbar-thumb);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-  border-radius: 10px;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+    background: var(--scrollbar-thumb-hover);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 /* Scrollbar plus fine pour mobile */
 @media (max-width: 768px) {
-  *::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
+    *::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
 }
 
 /* Animation smooth pour le scroll */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Cache la scrollbar mais garde la fonctionnalité (optionnel) */
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Classes utilitaires pour les couleurs */
 
 /* Backgrounds */
 .bg-gradient-theme {
-  background: linear-gradient(to bottom right, var(--bg-gradient-from), var(--bg-gradient-via), var(--bg-gradient-to));
+    background: linear-gradient(
+        to bottom right,
+        var(--bg-gradient-from),
+        var(--bg-gradient-via),
+        var(--bg-gradient-to)
+    );
 }
 
 .bg-clip-text {
-  background: linear-gradient(
-    to bottom right, 
-    var(--secondary),
-    var(--primary-light),
-    var(--secondary-light),
-    var(--secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; /* Nécessaire pour afficher le gradient */
-  -webkit-text-fill-color: transparent; /* Pour Safari */
+    background: linear-gradient(
+        to bottom right,
+        var(--secondary),
+        var(--primary-light),
+        var(--secondary-light),
+        var(--secondary)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Nécessaire pour afficher le gradient */
+    -webkit-text-fill-color: transparent; /* Pour Safari */
 }
 
-
-
 .bg-theme {
-  background-color: var(--background);
+    background-color: var(--background);
 }
 
 .bg-primary {
-  background-color: var(--primary);
+    background-color: var(--primary);
 }
 
 .bg-primary-light {
-  background-color: var(--primary-light);
+    background-color: var(--primary-light);
 }
 
 .bg-accent {
-  background-color: var(--accent);
+    background-color: var(--accent);
 }
 
 .bg-accent:hover,
 .hover\:bg-accent-hover:hover {
-  background-color: var(--accent-hover);
+    background-color: var(--accent-hover);
 }
 
 .bg-card {
-  background-color: var(--card-bg);
+    background-color: var(--card-bg);
 }
 
 .hover\:bg-card-hover:hover {
-  background-color: var(--card-hover);
+    background-color: var(--card-hover);
 }
 
 .bg-badge {
-  background-color: var(--badge-bg);
+    background-color: var(--badge-bg);
 }
 
 .bg-project {
-  background-color: var(--project-bg);
+    background-color: var(--project-bg);
 }
 
 .bg-project:hover,
 .hover\:bg-project-hover:hover {
-  background-color: var(--project-hover);
+    background-color: var(--project-hover);
 }
 
 .bg-button-social {
-  background-color: var(--button-social-bg);
+    background-color: var(--button-social-bg);
 }
 
 .bg-button-social:hover,
 .hover\:bg-button-social-hover:hover {
-  background-color: var(--button-social-hover);
+    background-color: var(--button-social-hover);
 }
 
 .bg-skill-bar {
-  background-color: var(--skill-bar-bg);
+    background-color: var(--skill-bar-bg);
 }
 
 .bg-particle-1 {
-  background-color: var(--particle-1);
+    background-color: var(--particle-1);
 }
 
 .bg-particle-2 {
-  background-color: var(--particle-2);
+    background-color: var(--particle-2);
 }
 
 /* Gradients */
 .bg-gradient-button {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
 .bg-gradient-skill {
-  background: linear-gradient(to right, var(--skill-bar-fill-from), var(--skill-bar-fill-to));
+    background: linear-gradient(
+        to right,
+        var(--skill-bar-fill-from),
+        var(--skill-bar-fill-to)
+    );
 }
 
 /* Text colors */
 .text-theme {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 .text-primary {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 .text-primary-light {
-  color: var(--primary-light);
+    color: var(--primary-light);
 }
 
 .text-secondary {
-  color: var(--secondary);
+    color: var(--secondary);
 }
 
 .text-text-primary {
-  color: var(--text-primary);
+    color: var(--text-primary);
 }
 
 .text-text-secondary {
-  color: var(--text-secondary);
+    color: var(--text-secondary);
 }
 
 .text-text-tertiary {
-  color: var(--text-tertiary);
+    color: var(--text-tertiary);
 }
 
 .text-badge {
-  color: var(--badge-text);
+    color: var(--badge-text);
 }
 
 .text-project-tag {
-  color: var(--project-tag-text);
+    color: var(--project-tag-text);
 }
 
 /* Border colors */
 .border-card {
-  border-color: var(--card-border);
+    border-color: var(--card-border);
 }
 
 .border-card-border {
-  border-color: var(--card-border);
+    border-color: var(--card-border);
 }
 
 /* Background avec border combinés pour les cards */
 .card {
-  background-color: var(--card-bg);
-  border-color: var(--card-border);
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
 }
 
 .card:hover {
-  background-color: var(--card-hover);
+    background-color: var(--card-hover);
 }
 
 /* Badge complet */
 .badge {
-  background-color: var(--badge-bg);
-  color: var(--badge-text);
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
 }
 
 /* Tag de projet */
 .project-tag {
-  background-color: var(--project-tag-bg);
-  color: var(--project-tag-text);
+    background-color: var(--project-tag-bg);
+    color: var(--project-tag-text);
 }
 
 /* Bouton hover card */
 .hover\:bg-card-hover:hover {
-  background-color: var(--card-hover);
+    background-color: var(--card-hover);
 }
