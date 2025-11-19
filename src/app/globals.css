@@ -407,6 +407,14 @@ html {
     );
 }
 
+.bg-gradient-profile {
+    background: linear-gradient(
+        to right,
+        var(--skill-bar-fill-from),
+        var(--skill-bar-fill-to)
+    );
+}
+
 /* Text colors */
 .text-theme {
     color: var(--foreground);
