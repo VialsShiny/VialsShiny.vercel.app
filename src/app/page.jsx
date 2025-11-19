@@ -84,6 +84,20 @@ export default function Home() {
                             {portfolioData.localisation}
                         </div>
 
+                        <div className="flex">
+                            <div className="z-10 relative left-0 inline-block text-left group">
+                                <div className="absolute inset-0 bg-white rounded-full blur-lg opacity-0 group-hover:opacity-75 transition-opacity duration-100 animate-pulse"></div>
+
+                                <div className="relative bg-gradient-button p-[4px] rounded-full transition-transform duration-300 group-hover:scale-105">
+                                    <img
+                                        src="/me.png"
+                                        alt="Thibault Vialatou"
+                                        className="size-42 md:size-48 xl:size-64 rounded-full"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                             <span className="text-primary-light">
                                 {portfolioData.prenom}
