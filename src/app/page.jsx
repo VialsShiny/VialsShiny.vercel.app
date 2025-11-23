@@ -61,7 +61,7 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-gradient-theme xl:max-h-screen min-h-screen overflow-hidden text-theme transition-colors duration-500">
+        <div className="bg-gradient-theme xl:max-h-screen min-h-screen xl:overflow-y-scroll text-theme transition-colors duration-500">
             {/* Bouton de basculement du thème */}
             <button
                 onClick={toggleTheme}
