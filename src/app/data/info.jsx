@@ -1,5 +1,5 @@
-import {FaDocker, FaGitAlt, FaReact} from 'react-icons/fa';
-import {GrMysql} from 'react-icons/gr';
+import { FaDocker, FaGitAlt, FaReact } from 'react-icons/fa';
+import { GrMysql } from 'react-icons/gr';
 import {
     SiJavascript,
     SiLaravel,
@@ -36,11 +36,11 @@ export const portfolioData = {
             tags: ['react', 'express', 'javascript'],
         },
         {
-            titre: 'Piscine Atlantis',
+            titre: "Pep's your fête",
             description:
-                'Site vitrine mettant en valeur l’expertise de l’entreprise dans les piscines, spas et équipements bien-être, avec un design moderne et une navigation intuitive.',
-            link: 'https://piscineatlantis.fr',
-            tags: ['php', 'javascript', 'html', 'css', 'twig'],
+                'Pep’s Your Fête transforme vos événements en souvenirs inoubliables grâce à des formules déco entièrement personnalisables.',
+            link: 'https://pepsyourfete.fr',
+            tags: ['php', 'javascript', 'html', 'css'],
         },
         {
             titre: 'Resto App',
