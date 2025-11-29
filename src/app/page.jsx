@@ -88,7 +88,7 @@ export default function Home() {
                             <div className="z-10 relative left-0 inline-block text-left group">
                                 <div className="absolute inset-0 bg-white rounded-full blur-lg opacity-0 group-hover:opacity-75 transition-opacity duration-100 animate-pulse"></div>
 
-                                <div className="relative bg-gradient-button p-[4px] rounded-full transition-transform duration-300 group-hover:scale-105">
+                                <div className="relative bg-gradient-button p-1 rounded-full transition-transform duration-300 group-hover:scale-105">
                                     <img
                                         src="/me.png"
                                         alt="Thibault Vialatou"
@@ -98,13 +98,12 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-                            <span className="text-primary-light">
-                                {portfolioData.prenom}
-                            </span>
-                            <br />
+                        <h1 className="flex flex-col text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                             <span className="bg-clip-text">
-                                {portfolioData.nom}
+                                {portfolioData.pseudo}
+                            </span>
+                            <span className="text-xl sm:text-3xl lg:text-4xl text-primary-light font-extrabold opacity-80">
+                                {portfolioData.prenom} {portfolioData.nom}
                             </span>
                         </h1>
 
