@@ -3,16 +3,20 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://vials-shiny.vercel.app"),
-  title: "Thibault Vialatou | Développeur Fullstack",
+  title: "Thibault Vialatou (VialsShiny) | Développeur Fullstack",
   description:
-    "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+    "Portfolio de Thibault Vialatou, alias VialsShiny, développeur web Fullstack spécialisé en React, Javascript et PHP.",
   keywords:
-    "Portfolio, Développeur Web, React, Next.js, Animations, Frontend, Backend, Php, Thibault Vialatou",
-  authors: [{ name: "Thibault Vialatou" }],
+    "Portfolio, Développeur Web, React, Next.js, Animations, Frontend, Backend, Php, Thibault Vialatou, VialsShiny, Vials",
+  authors: [
+    { name: "Thibault Vialatou", url: "https://vials-shiny.vercel.app" },
+    { name: "VialsShiny", url: "https://vials-shiny.vercel.app" },
+    { name: "Vials", url: "https://vials-shiny.vercel.app" }
+  ],
   openGraph: {
-    title: "Thibault Vialatou | Développeur Fullstack",
+    title: "Thibault Vialatou (VialsShiny) | Développeur Fullstack",
     description:
-      "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+      "Portfolio de Thibault Vialatou, alias VialsShiny, développeur web Fullstack spécialisé en React, Javascript et PHP.",
     url: "/",
     siteName: "Portfolio",
     images: [
@@ -20,7 +24,7 @@ export const metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Aperçu du portfolio de Thibault Vialatou",
+        alt: "Aperçu du portfolio de Thibault Vialatou (VialsShiny)",
       },
     ],
     locale: "fr_FR",
@@ -28,9 +32,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Thibault Vialatou | Développeur Fullstack",
+    title: "Thibault Vialatou (VialsShiny) | Développeur Fullstack",
     description:
-      "Portfolio de Thibault Vialatou, développeur web Fullstack spécialisé en React, Javascript et PHP.",
+      "Portfolio de Thibault Vialatou, alias VialsShiny, développeur web Fullstack spécialisé en React, Javascript et PHP.",
     images: ["/og-image.png"],
     creator: "@VialsShiny",
   },
