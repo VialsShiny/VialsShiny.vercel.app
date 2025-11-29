@@ -10,6 +10,7 @@ import {
 export const portfolioData = {
     prenom: 'Thibault',
     nom: 'Vialatou',
+    pseudo: 'VialsShiny',
     age: 17,
     titre: 'Développeur Full Stack',
     localisation: 'Paris, France',
